@@ -18,8 +18,11 @@ app = FastAPI()
 class PredictionData(BaseModel):
     hour: int
     month: int
-    day: int
     weekday: int
+
+@app.get("/")
+async def root():
+    return {"message": "Hello World"}
 
 @app.post("/predict")
 async def predict(data: PredictionData):
@@ -35,4 +38,4 @@ async def predict(data: PredictionData):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8000)
+    uvicorn.run("api:app", host="0.0.0.0", port=8000)
