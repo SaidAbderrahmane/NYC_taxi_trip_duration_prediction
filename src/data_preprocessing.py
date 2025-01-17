@@ -18,7 +18,8 @@ def preprocess_data(df):
     df['weekday'] = df['pickup_datetime'].dt.weekday
     df['month'] = df['pickup_datetime'].dt.month
     df['hour'] = df['pickup_datetime'].dt.hour
-
+    # Save preprocessed dataframe to CSV
+    df.to_csv('data/raw/preprocessed_data.csv', index=False)
 
     return df
 

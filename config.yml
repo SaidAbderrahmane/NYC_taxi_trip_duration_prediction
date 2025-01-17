@@ -3,3 +3,8 @@ paths:
   model_path: ./models/taxi.model
 ml:
   random_state: 42
+mlflow:
+  tracking_uri: ./mlruns
+  experiment_name: NYC_Taxi_Trip_Prediction
+  model_name: NYC_Taxi_Trip_Prediction
+  model_version: 1

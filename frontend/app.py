@@ -19,6 +19,6 @@ if st.button("Predict"):
     
     if response.status_code == 200:
         predictions = response.json()
-        st.write("Prediction: ", predictions)
+        st.write("Prediction: ", predictions[0], "minutes")
     else:
         st.write("Error: Unable to get prediction")
